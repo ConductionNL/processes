@@ -18,7 +18,7 @@ You can install docker-desktop from [the docker website](https://hub.docker.com/
 ## Generating your component (repository/codebase)
 Starting up your first Common Ground component is extremely easy, al you need is a GitHub account and go the link below and fill in the form, press create and press to we have a component!
 
-[https://github.com/ConductionNL/Proto-component-commonground/generate](https://github.com/ConductionNL/Proto-component-commonground/generate) 
+[https://github.com/ConductionNL/Proto-component-commonground/generate](https://github.com/ConductionNL/Proto-component-commonground/generate)
 
 After that you should be redirected to your own brand new repository. 
 
@@ -41,7 +41,7 @@ cd c:\repos\common-ground\my-component (if you installed your code on a differen
 $ docker-compose up
 ```
 
-Your computer should now start up your local development environment. Don't worry about al the code coming by, let's just wait until it finishes. You're free to watch along and see what exactly docker is doing, you will know when it's finished when it tells you that it is ready to handle connections. 
+Your computer should now start up your local development environment. Don’t worry about al the code coming by, let's just wait until it finishes. You're free to watch along and see what exactly docker is doing, you will know when it's finished when it tells you that it is ready to handle connections. 
 
 Open your browser type <http://localhost/> as address and hit enter, you should now see your common ground component up and running.
 
@@ -65,7 +65,7 @@ First let's remove the resources currently in the api, we can do that by just re
 
 Next let's add our own resources, we can do this in two ways, we can do old fashioned coding, but we can also use the build in maker bundle of the proto component, to quickly generate our entities for us (without the fuss of actual coding).
  
-Let's open a new command line window and navigate to our root folder, exactly like we did under "spinning up your component". And then lets fire up maker bundle (make sure that your component is still running in your other command window). We can do so by the following command:
+Let's open a new command line window and navigate to our root folder, exactly like we did under *“spinning up your component”*. And then lets fire up maker bundle (make sure that your component is still running in your other command window). We can do so by the following command:
 
 ```CLI
 $ docker-compose exec php bin/console make:entity
@@ -85,7 +85,7 @@ Best practice is to fetch the Conduction Common Ground component into a local up
 __Please make sure the you have committed al your changes to your current codebase and pushed a backup copy to your Git repo before continuing__
 
 ```CLI
-git remote add upstream https://github.com/ConductionNL/Proto-component-commonground.git
+git remote add upstream <https://github.com/ConductionNL/Proto-component-commonground.git>
 git fetch upstream
 git branch upstream upstream/master
 ```
@@ -309,7 +309,12 @@ A vital part of te common ground community is sharing your work, and telling oth
 
 Wel it actually isn't, there is a specific common ground platform over at common-ground.dev that reads repositories and updates user. So the only thing we need to do is tell this platform that we have started a new common ground repository. How do we do that? Simple we use the name common ground (or commonground) in the discription of our repository. common-ground.dev should then pick up our repository within the hour.
 
-Another option that we have is to declare our repository on [publiccode](), to do this you need to copy the publiccode.yaml from the [api/public/schema](api/public/schema]) folder to your root folder (dont forget to redo this every time you make a major change to your repository concerning versioning or licencing).  
+When using Github. To set up a webhook, go to the settings page of your repository or organization. From there, click Webhooks, then Add webhook. Use te following settings:
+
+* Payload URL: <https://www.common-ground.dev/webhook/github>
+* Content type: Application/JSON
+* Secret: [leave blanck]
+* Events: [just the push event]
 
 
 Continues integration
