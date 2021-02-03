@@ -119,4 +119,4 @@ dependsOn:
 
 installations:
     - type: helm
-      url: "https://github.com/ConductionNL/procestypecatalogus/raw/master/api/helm/ptc-0.1.0.tgz"
+      url: "https://raw.githubusercontent.com/ConductionNL/procestypecatalogus/master/api/helm/"
