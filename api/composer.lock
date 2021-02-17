@@ -584,12 +584,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ConductionNL/CommonGroundBundle.git",
-                "reference": "ef74639ccb826115d71a30c483202c43c114d2e6"
+                "reference": "037a21895884bde96b6964283219d58ca442dbc9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ConductionNL/CommonGroundBundle/zipball/ef74639ccb826115d71a30c483202c43c114d2e6",
-                "reference": "ef74639ccb826115d71a30c483202c43c114d2e6",
+                "url": "https://api.github.com/repos/ConductionNL/CommonGroundBundle/zipball/037a21895884bde96b6964283219d58ca442dbc9",
+                "reference": "037a21895884bde96b6964283219d58ca442dbc9",
                 "shasum": ""
             },
             "require": {
@@ -667,7 +667,7 @@
                 "postcode",
                 "rsin"
             ],
-            "time": "2021-01-05T14:48:58+00:00"
+            "time": "2021-02-17T14:45:04+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -4093,6 +4093,7 @@
                 }
             ],
             "description": "A security checker for your composer.lock",
+            "abandoned": "https://github.com/fabpot/local-php-security-checker",
             "time": "2019-11-01T13:20:14+00:00"
         },
         {
@@ -9344,12 +9345,12 @@
             "version": "1.9.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/webmozart/assert.git",
+                "url": "https://github.com/webmozarts/assert.git",
                 "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/bafc69caeb4d49c39fd0779086c03a3738cbb389",
+                "url": "https://api.github.com/repos/webmozarts/assert/zipball/bafc69caeb4d49c39fd0779086c03a3738cbb389",
                 "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389",
                 "shasum": ""
             },
