@@ -4,15 +4,15 @@
 
 settings:
   registryBase: docker.io/conduction
-  projectName: rocestypecatalogus
-  name: rocestypecatalogus
+  projectName: procestypecatalogus
+  name: procestypecatalogus
   version: V1.0
   description: 'Naast deze JSON rest API is er ook een [graphql](/graphql) interface beschikbaar.'
   repro: https://github.com/ConductionNL/procestypecatalogus
   demo: pc.zaakonline.nl
   domain: zuid-drecht.nl
-  subdomain: ptc
-  subpath: ptc
+  subdomain: procestypecatalogus
+  subpath: procestypecatalogus
   subpathRouting: true
   env: dev
   web: false
