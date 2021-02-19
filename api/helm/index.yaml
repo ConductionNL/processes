@@ -5,7 +5,7 @@ entries:
       category: Database
     apiVersion: v2
     appVersion: 11.10.0
-    created: "2021-02-17T15:05:24.3156206Z"
+    created: "2021-02-19T00:47:33.618762Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -34,26 +34,13 @@ entries:
     urls:
     - charts/postgresql-10.1.1.tgz
     version: 10.1.1
-  ptc:
+  procestypecatalogus:
   - apiVersion: v1
     appVersion: V1.0
-    created: "2021-02-17T15:05:24.2870307Z"
+    created: "2021-02-19T00:47:33.6046814Z"
     description: Naast deze JSON rest API is er ook een [graphql](/graphql) interface
       beschikbaar.
-    digest: 226f70985f930bdd6e5a90a420c093a5d5ad2c406d4fa659544ec34e4b1a4e37
-    home: ptc.zuid-drecht.nl
-    icon: ptc.zuid-drecht.nl
-    name: ptc
-    urls:
-    - ptc-0.1.0.tgz
-    version: 0.1.0
-  rocestypecatalogus:
-  - apiVersion: v1
-    appVersion: V1.0
-    created: "2021-02-17T15:05:24.2981999Z"
-    description: Naast deze JSON rest API is er ook een [graphql](/graphql) interface
-      beschikbaar.
-    digest: 165fdd8e50a2d6d8a40fa96bd961b4ea056a5e7f6ea5f5316be940eaea298e7e
+    digest: 8ba404beddb85fcd86ed23c7d6dcfdf459dc380da125834f08ae0a048212a0a6
     home: https://www.conduction.nl
     icon: https://conductionnl.github.io/images/conduction_avatar_blue_on_transparant.svg
     keywords:
@@ -66,11 +53,11 @@ entries:
       name: Ruben van der Linde
     - email: info@conduction.nl
       name: Conduction
-    name: rocestypecatalogus
+    name: procestypecatalogus
     sources:
     - https://commonground.conduction.nl/
     - https://www.commonground.nl/
     urls:
-    - rocestypecatalogus-0.1.0.tgz
+    - procestypecatalogus-0.1.0.tgz
     version: 0.1.0
-generated: "2021-02-17T15:05:24.2230268Z"
+generated: "2021-02-19T00:47:33.5924965Z"
