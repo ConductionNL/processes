@@ -168,6 +168,31 @@ class ZuiddrechtFixtures extends Fixture
         $manager->persist($processType);
         $manager->flush();
 
+        $stage = new Stage();
+        $stage->setName('contactgegevens');
+        $stage->setDescription('contactgegevens');
+        $stage->setIcon('fas fa-parking');
+        $stage->setSlug('contactgegevens');
+        $stage->setProcess($processType);
+
+        $section = new Section();
+        $section->setStage($stage);
+        $section->setName('Uw contactgegevens');
+        $section->setDescription('Wat zijn uw contactgegevens?');
+        $section->setProperties([
+            $this->commonGroundService->cleanUrl(['component' => 'vtc', 'type' => 'properties', 'id' => '8f21de59-5c54-4878-a485-6dbb13864619']),
+            $this->commonGroundService->cleanUrl(['component' => 'vtc', 'type' => 'properties', 'id' => 'f39233ba-4a68-4289-856d-ab880d085505']),
+            $this->commonGroundService->cleanUrl(['component' => 'vtc', 'type' => 'properties', 'id' => '415bc891-2d21-42b7-b57e-299038d67eb2']),
+            $this->commonGroundService->cleanUrl(['component' => 'vtc', 'type' => 'properties', 'id' => '3825f835-9880-4022-b6d3-3b322d9a7176']),
+            $this->commonGroundService->cleanUrl(['component' => 'vtc', 'type' => 'properties', 'id' => 'a10044be-2fde-470c-a705-994ca4b87548']),
+            $this->commonGroundService->cleanUrl(['component' => 'vtc', 'type' => 'properties', 'id' => 'c9328302-d02c-4c00-ae7d-c16abef833c5']),
+        ]);
+        $stage->addSection($section);
+
+        $processType->addStage($stage);
+        $manager->persist($processType);
+        $manager->flush();
+
         /*
          *  Contact Formulier
          */
@@ -277,6 +302,30 @@ class ZuiddrechtFixtures extends Fixture
         $processType->addStage($stage);
         $manager->persist($processType);
         $manager->flush();
+
+        $stage = new Stage();
+        $stage->setName('extra gegevens');
+        $stage->setIcon('fas fa-users');
+        $stage->setSlug('extra-gegevens');
+        $stage->setDescription('Extra gegevens van uw organisaties');
+
+        $section = new Section();
+        $section->setName('Gegevens');
+        $section->setDescription('Uw contact gegevens');
+        $section->setProperties([
+            $this->commonGroundService->cleanUrl(['component' => 'vtc', 'type' => 'properties', 'id' => 'f20dc701-f24d-428c-865e-8d42aba36224']),
+            $this->commonGroundService->cleanUrl(['component' => 'vtc', 'type' => 'properties', 'id' => '488c044f-6263-40ce-b066-1e7ec3c67a59']),
+            $this->commonGroundService->cleanUrl(['component' => 'vtc', 'type' => 'properties', 'id' => '951b9db6-9b13-4188-b583-4b54139b6085']),
+            $this->commonGroundService->cleanUrl(['component' => 'vtc', 'type' => 'properties', 'id' => '8bb40fa5-811b-42ea-8fb9-4a229d81a214']),
+            $this->commonGroundService->cleanUrl(['component' => 'vtc', 'type' => 'properties', 'id' => '8be2f5a7-e165-45c8-8cae-0969dd314b8d']),
+            $this->commonGroundService->cleanUrl(['component' => 'vtc', 'type' => 'properties', 'id' => '90d34056-b0a4-47a7-bc8b-29501155efd3']),
+        ]);
+        $stage->addSection($section);
+
+        $processType->addStage($stage);
+        $manager->persist($processType);
+        $manager->flush();
+
 
         /*
          *  Melding Openbare ruimte
