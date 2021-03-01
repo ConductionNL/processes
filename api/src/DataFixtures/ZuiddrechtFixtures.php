@@ -325,7 +325,6 @@ class ZuiddrechtFixtures extends Fixture
         $manager->persist($processType);
         $manager->flush();
 
-
         /*
          *  Melding Openbare ruimte
          */
