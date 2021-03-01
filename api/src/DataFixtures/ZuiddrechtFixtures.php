@@ -170,14 +170,13 @@ class ZuiddrechtFixtures extends Fixture
 
         $stage = new Stage();
         $stage->setName('contactgegevens');
-        $stage->setDescription('contactgegevens');
-        $stage->setIcon('fas fa-parking');
+        $stage->setIcon('fas fa-users');
         $stage->setSlug('contactgegevens');
         $stage->setProcess($processType);
 
         $section = new Section();
         $section->setStage($stage);
-        $section->setName('Uw contactgegevens');
+        $section->setName('Contactgegevens voor de tompoes');
         $section->setDescription('Wat zijn uw contactgegevens?');
         $section->setProperties([
             $this->commonGroundService->cleanUrl(['component' => 'vtc', 'type' => 'properties', 'id' => '8f21de59-5c54-4878-a485-6dbb13864619']),
@@ -311,7 +310,7 @@ class ZuiddrechtFixtures extends Fixture
 
         $section = new Section();
         $section->setName('Gegevens');
-        $section->setDescription('Uw contact gegevens');
+        $section->setDescription('Uw contact gegevens voor de tompoes');
         $section->setProperties([
             $this->commonGroundService->cleanUrl(['component' => 'vtc', 'type' => 'properties', 'id' => 'f20dc701-f24d-428c-865e-8d42aba36224']),
             $this->commonGroundService->cleanUrl(['component' => 'vtc', 'type' => 'properties', 'id' => '488c044f-6263-40ce-b066-1e7ec3c67a59']),
@@ -325,7 +324,6 @@ class ZuiddrechtFixtures extends Fixture
         $processType->addStage($stage);
         $manager->persist($processType);
         $manager->flush();
-
 
         /*
          *  Melding Openbare ruimte
