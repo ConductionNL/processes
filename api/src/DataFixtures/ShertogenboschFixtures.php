@@ -115,13 +115,13 @@ class ShertogenboschFixtures extends Fixture
         $stage = new Stage();
         $stage->setName('gegevens organisatie');
         $stage->setDescription('De contactgegeven van de organisatie');
-        $stage->setIcon('fas fa-envelope');
+        $stage->setIcon('fas fa-users   ');
         $stage->setSlug('bedrijfgegevens');
         $stage->setProcess($processType);
 
         $section = new Section();
         $section->setStage($stage);
-        $section->setName('Uw contactgegevens');
+        $section->setName('Contactgegevens voor de tompoes');
         $section->setDescription('Wat zijn uw contactgegevens?');
         $section->setProperties([
             $this->commonGroundService->cleanUrl(['component' => 'vtc', 'type' => 'properties', 'id' => 'ba8506d8-458e-4d6d-b88a-8107f960d9b5']),
