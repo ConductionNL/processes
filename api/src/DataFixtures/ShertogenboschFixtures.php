@@ -111,5 +111,30 @@ class ShertogenboschFixtures extends Fixture
         $manager->persist($section);
 
         $manager->flush();
+
+        $stage = new Stage();
+        $stage->setName('gegevens organisatie');
+        $stage->setDescription('De contactgegeven van de organisatie');
+        $stage->setIcon('fas fa-users   ');
+        $stage->setSlug('bedrijfgegevens');
+        $stage->setProcess($processType);
+
+        $section = new Section();
+        $section->setStage($stage);
+        $section->setName('Contactgegevens voor de tompoes');
+        $section->setDescription('Wat zijn uw contactgegevens?');
+        $section->setProperties([
+            $this->commonGroundService->cleanUrl(['component' => 'vtc', 'type' => 'properties', 'id' => 'ba8506d8-458e-4d6d-b88a-8107f960d9b5']),
+            $this->commonGroundService->cleanUrl(['component' => 'vtc', 'type' => 'properties', 'id' => '009d51f1-c5bd-402c-8be4-bf79a00ea22f']),
+            $this->commonGroundService->cleanUrl(['component' => 'vtc', 'type' => 'properties', 'id' => '42f011f7-a77d-48db-b415-d4bc0f0bf6dc']),
+            $this->commonGroundService->cleanUrl(['component' => 'vtc', 'type' => 'properties', 'id' => '20d3b9cc-131a-4397-803f-2c43b6deb6ca']),
+            $this->commonGroundService->cleanUrl(['component' => 'vtc', 'type' => 'properties', 'id' => '922f34e2-39db-4e0b-a98c-252ed7243945']),
+            $this->commonGroundService->cleanUrl(['component' => 'vtc', 'type' => 'properties', 'id' => '2cc19bb6-808e-4cd2-80a9-d9404f134280']),
+        ]);
+        $stage->addSection($section);
+
+        $processType->addStage($stage);
+        $manager->persist($processType);
+        $manager->flush();
     }
 }
