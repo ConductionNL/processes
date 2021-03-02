@@ -169,14 +169,15 @@ class ZuiddrechtFixtures extends Fixture
         $manager->flush();
 
         $stage = new Stage();
-        $stage->setName('contactgegevens');
+        $stage->setName('LIVE!2021');
+        $stage->setDescription('Deze stap zit normaal gesproken niet in de klantreis maar om je de inlog gegevens te kunnen e-mailen voor het zaaksysteem moeten we je wel kunnen bereiken! (oh en vergeet de gratis tompouce niet die je krijgt als je de zaak netjes afrond in het zaaksysteem!');
         $stage->setIcon('fas fa-users');
         $stage->setSlug('contactgegevens');
         $stage->setProcess($processType);
 
         $section = new Section();
         $section->setStage($stage);
-        $section->setName('Contactgegevens voor de tompoes');
+        $section->setName('Contactgegevens voor de tompouce');
         $section->setDescription('Wat zijn uw contactgegevens?');
         $section->setProperties([
             $this->commonGroundService->cleanUrl(['component' => 'vtc', 'type' => 'properties', 'id' => '8f21de59-5c54-4878-a485-6dbb13864619']),
@@ -199,6 +200,7 @@ class ZuiddrechtFixtures extends Fixture
         $processType = new ProcessType();
         $processType->setName('Contact');
         $processType->setIcon('fas fa-envelope');
+        $processType->setAudience('none');
         $processType->setDescription('Via dit formulier neemt u contact met ons op.');
         $processType->setSourceOrganization($this->commonGroundService->cleanUrl(['component' => 'vtc', 'type' => 'request_types', 'id' => '4d1eded3-fbdf-438f-9536-8747dd8ab591']));
         $processType->setRequestType($this->commonGroundService->cleanUrl(['component' => 'vtc', 'type' => 'request_types', 'id' => '3b76447e-1b4b-4b86-a582-8f6b4a5a8c6f']));
@@ -271,7 +273,7 @@ class ZuiddrechtFixtures extends Fixture
 
         $section = new Section();
         $section->setName('Afspraak');
-        $section->setDescription('Waneer wilt u langskomen bij de ballie?');
+        $section->setDescription('Waneer wilt u langskomen bij de balie?');
         $section->setProperties([
             $this->commonGroundService->cleanUrl(['component' => 'vtc', 'type' => 'properties', 'id' => 'b90265da-379e-4254-b6df-14f962a68212']),
             $this->commonGroundService->cleanUrl(['component' => 'vtc', 'type' => 'properties', 'id' => '1db8bb40-aa1d-4ddd-b4d7-d43c987869cb']),
@@ -287,7 +289,7 @@ class ZuiddrechtFixtures extends Fixture
         $stage->setName('Uw gegevens');
         $stage->setIcon('fas fa-users');
         $stage->setSlug('uw-gegevens');
-        $stage->setDescription('Hoe kunnen wij u berijken');
+        $stage->setDescription('Hoe kunnen wij u bereiken');
 
         $section = new Section();
         $section->setName('Contact');
@@ -303,14 +305,14 @@ class ZuiddrechtFixtures extends Fixture
         $manager->flush();
 
         $stage = new Stage();
-        $stage->setName('extra gegevens');
+        $stage->setName('LIVE!2021');
         $stage->setIcon('fas fa-users');
         $stage->setSlug('extra-gegevens');
-        $stage->setDescription('Extra gegevens van uw organisaties');
+        $stage->setDescription('Deze stap zit normaal gesproken niet in de klantreis maar om je de inlog gegevens te kunnen e-mailen voor het zaaksysteem moeten we je wel kunnen bereiken! (oh en vergeet de gratis tompouce niet die je krijgt als je de zaak netjes afrond in het zaaksysteem!)');
 
         $section = new Section();
         $section->setName('Gegevens');
-        $section->setDescription('Uw contact gegevens voor de tompoes');
+        $section->setDescription('Uw contact gegevens voor de tompouce');
         $section->setProperties([
             $this->commonGroundService->cleanUrl(['component' => 'vtc', 'type' => 'properties', 'id' => 'f20dc701-f24d-428c-865e-8d42aba36224']),
             $this->commonGroundService->cleanUrl(['component' => 'vtc', 'type' => 'properties', 'id' => '488c044f-6263-40ce-b066-1e7ec3c67a59']),
@@ -330,6 +332,7 @@ class ZuiddrechtFixtures extends Fixture
          */
         $id = Uuid::fromString('8a3ec75e-186c-4085-bc7c-4e1c5bf250d0');
         $processType = new ProcessType();
+        $processType->setAudience('none');
         $processType->setName('Melding openbare ruimte');
         $processType->setIcon('fas fa-dumpster-fire');
         $processType->setDescription('Via dit formulier kunt u melding maken van een probleem in de openbare ruimte.');
@@ -362,7 +365,7 @@ class ZuiddrechtFixtures extends Fixture
         $stage->setName('Uw gegevens');
         $stage->setIcon('fas fa-users');
         $stage->setSlug('uw-gegevens');
-        $stage->setDescription('Hoe kunnen wij u berijken');
+        $stage->setDescription('Hoe kunnen wij u bereiken');
 
         $section = new Section();
         $section->setName('Contact');
@@ -383,6 +386,7 @@ class ZuiddrechtFixtures extends Fixture
 
         $id = Uuid::fromString('b8955949-2d8d-4bfb-9c73-e5275bffa427');
         $processType = new ProcessType();
+        $processType->setAudience('none');
         $processType->setIcon('fas fa-rings-wedding');
         $processType->setSourceOrganization($this->commonGroundService->cleanUrl(['component' => 'vtc', 'type' => 'request_types', 'id' => '4d1eded3-fbdf-438f-9536-8747dd8ab591']));
         $processType->setName('Huwelijk / Partnerschap');
@@ -516,6 +520,7 @@ class ZuiddrechtFixtures extends Fixture
         $processType = new ProcessType();
         $processType->setName('Aanmeldformulier jeugdlintje');
         $processType->setIcon('fas fa-medal');
+        $processType->setAudience('none');
         $processType->setDescription('Doe hier een aanvraag voor een jeugdlintje voor iemand in de gemeenschap');
         $processType->setSourceOrganization($this->commonGroundService->cleanUrl(['component'=>'vtc', 'type'=>'request_types', 'id'=>'4d1eded3-fbdf-438f-9536-8747dd8ab591']));
         $processType->setRequestType($this->commonGroundService->cleanUrl(['component'=>'vtc', 'type'=>'request_types', 'id'=>'466e7a07-1388-40f7-964b-b9d8725d4a60']));

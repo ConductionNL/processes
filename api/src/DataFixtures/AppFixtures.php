@@ -245,6 +245,7 @@ class AppFixtures extends Fixture
         $id = Uuid::fromString('d8d053cf-573a-4cbd-8b15-4681372cc2c8');
         $processType = new ProcessType();
         $processType->setIcon('fal fa-baby');
+        $processType->setAudience('none');
         $processType->setSourceOrganization('0000');
         $processType->setName('Geboorte aangifte');
         $processType->setDescription('Het aangeven van een nieuw geboren kind');
@@ -439,6 +440,7 @@ class AppFixtures extends Fixture
          */
         $id = Uuid::fromString('07b9df95-cc8a-43c8-bc1e-5f1392973b39');
         $processType = new ProcessType();
+        $processType->setAudience('none');
         $processType->setIcon('fal fa-map-marker-edit');
         $processType->setSourceOrganization('0000');
         $processType->setName('Melding openbare ruimte');
@@ -814,6 +816,7 @@ class AppFixtures extends Fixture
 
         $id = Uuid::fromString('5b10c1d6-7121-4be2-b479-7523f1b625f1');
         $processType = new ProcessType();
+        $processType->setAudience('none');
         $processType->setIcon('fal fa-rings-wedding');
         $processType->setSourceOrganization('000');
         $processType->setName('Huwelijk / Partnerschap');

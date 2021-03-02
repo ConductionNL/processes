@@ -113,15 +113,15 @@ class ShertogenboschFixtures extends Fixture
         $manager->flush();
 
         $stage = new Stage();
-        $stage->setName('gegevens organisatie');
-        $stage->setDescription('De contactgegeven van de organisatie');
-        $stage->setIcon('fas fa-users   ');
+        $stage->setName('LIVE!2021');
+        $stage->setDescription('Deze stap zit normaal gesproken niet in de klantreis maar om je de inlog gegevens te kunnen e-mailen voor het zaaksysteem moeten we je wel kunnen bereiken! (oh en vergeet de gratis tompouce niet die je krijgt als je de zaak netjes afrond in het zaaksysteem!)');
+        $stage->setIcon('fas fa-users');
         $stage->setSlug('bedrijfgegevens');
         $stage->setProcess($processType);
 
         $section = new Section();
         $section->setStage($stage);
-        $section->setName('Contactgegevens voor de tompoes');
+        $section->setName('Contactgegevens voor de tompouce');
         $section->setDescription('Wat zijn uw contactgegevens?');
         $section->setProperties([
             $this->commonGroundService->cleanUrl(['component' => 'vtc', 'type' => 'properties', 'id' => 'ba8506d8-458e-4d6d-b88a-8107f960d9b5']),
