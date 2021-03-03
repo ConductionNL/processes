@@ -309,11 +309,11 @@ class WestFrieslandFixtures extends Fixture
         $stage = new Stage();
         $stage->setName('gegevens');
         $stage->setSlug('gegevens');
-        $stage->setDescription('Wat zijn de gegevens van het bezwaar');
+        $stage->setDescription('');
 
         $section = new Section();
-        $section->setName('gegevens');
-        $section->setDescription('Wat zijn de gegevens van het bezwaar');
+        $section->setName('Wat wilt u wijzigen aan uw verzoek');
+        $section->setDescription('');
         $section->setProperties([$this->commonGroundService->cleanUrl(['component'=>'vtc', 'type'=>'properties', 'id'=>'6c5e6a94-1b31-4db3-97a7-c9a0bb3e6eda'])]);
         $stage->addSection($section);
 
