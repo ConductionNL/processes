@@ -176,6 +176,7 @@ class AppFixtures extends Fixture
         $processType = new ProcessType();
         $processType->setIcon('fal fa-surprise');
         $processType->setSourceOrganization('0000');
+        $processType->setAudience('none');
         $processType->setName('Bezwaar');
         $processType->setDescription('Het maken van bezwaar tegen een genomen besluit');
         $processType->setRequestType('https://vtc.zaakonline.nl/requestType/5fe5ed51-f9d1-4ece-b78d-e960e6ce3fd1');

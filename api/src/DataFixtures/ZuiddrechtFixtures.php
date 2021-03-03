@@ -60,16 +60,16 @@ class ZuiddrechtFixtures extends Fixture
         $manager->flush();
 
         $stage = new Stage();
-        $stage->setName('Is er een eigen parkeergelegenheid bij uw woning?');
-        $stage->setDescription('Is er een eigen parkeergelegenheid bij uw woning?');
+        $stage->setName('Parkeergelegenheid');
+        $stage->setDescription('');
         $stage->setIcon('fas fa-parking');
         $stage->setSlug('parkeergelegenheid');
         $stage->setProcess($processType);
 
         $section = new Section();
         $section->setStage($stage);
-        $section->setName('Parkeergelegenheid');
-        $section->setDescription('Is er een eigen parkeergelegenheid bij uw woning?');
+        $section->setName('Is er een parkeergelegenheid bij uw woning?');
+        $section->setDescription('');
         $section->setProperties([
             $this->commonGroundService->cleanUrl(['component' => 'vtc', 'type' => 'properties', 'id' => '92461726-dc0a-4132-a466-4968a37f4620']),
         ]);
@@ -80,16 +80,16 @@ class ZuiddrechtFixtures extends Fixture
         $manager->flush();
 
         $stage = new Stage();
-        $stage->setName('Vergunning oud adres');
-        $stage->setDescription('vergunning oud adres');
+        $stage->setName('Bestaande of oude vergunning?');
+        $stage->setDescription('');
         $stage->setIcon('fas fa-parking');
         $stage->setSlug('oud-adres');
         $stage->setProcess($processType);
 
         $section = new Section();
         $section->setStage($stage);
-        $section->setName('vergunning oud adres');
-        $section->setDescription('Ik heb een vergunning op mijn oude adres en wil ook een vergunning op mijn nieuwe adres:');
+        $section->setName('Heeft u nu of in het verleden een parkeervergunning gehad in Zuid-Drecht?');
+        $section->setDescription('');
         $section->setProperties([
             $this->commonGroundService->cleanUrl(['component' => 'vtc', 'type' => 'properties', 'id' => '3539cb5f-6801-4f45-838f-9c592946a592']),
         ]);
