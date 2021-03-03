@@ -101,15 +101,15 @@ class ZuiddrechtFixtures extends Fixture
 
         $stage = new Stage();
         $stage->setName('kentekenbewijs');
-        $stage->setDescription('kentekenbewijs');
+        $stage->setDescription('');
         $stage->setIcon('fas fa-parking');
         $stage->setSlug('kentekenbewijs');
         $stage->setProcess($processType);
 
         $section = new Section();
         $section->setStage($stage);
-        $section->setName('kentekenbewijs');
-        $section->setDescription('Staat uw naam op het kentenbewijs?');
+        $section->setName('Staat het kenteken bewijs op uw naam?');
+        $section->setDescription('');
         $section->setProperties([
             $this->commonGroundService->cleanUrl(['component' => 'vtc', 'type' => 'properties', 'id' => 'c3102b38-b07c-4392-8a31-e57d81b39d70']),
         ]);
@@ -130,15 +130,15 @@ class ZuiddrechtFixtures extends Fixture
 
         $stage = new Stage();
         $stage->setName('type voertuig');
-        $stage->setDescription('type voertuig');
-        $stage->setIcon('fas fa-parking');
+        $stage->setDescription('');
+        $stage->setIcon('fas fa-car');
         $stage->setSlug('type-voertuig');
         $stage->setProcess($processType);
 
         $section = new Section();
         $section->setStage($stage);
-        $section->setName('type voertuig');
-        $section->setDescription('U vraagt een parkeervergunning aan voor een:');
+        $section->setName('U vraagt een parkeervergunning aan voor een:');
+        $section->setDescription('');
         $section->setProperties([
             $this->commonGroundService->cleanUrl(['component' => 'vtc', 'type' => 'properties', 'id' => 'ee8acd31-8a5e-48e9-ac16-0f73543d18c5']),
         ]);
@@ -150,15 +150,15 @@ class ZuiddrechtFixtures extends Fixture
 
         $stage = new Stage();
         $stage->setName('betalen');
-        $stage->setDescription('betalen');
-        $stage->setIcon('fas fa-parking');
+        $stage->setDescription('');
+        $stage->setIcon('fas fa-cash-register');
         $stage->setSlug('betalen');
         $stage->setProcess($processType);
 
         $section = new Section();
         $section->setStage($stage);
-        $section->setName('betalen');
-        $section->setDescription('Hoe wilt u betalen?');
+        $section->setName('Hoe wilt u betalen?');
+        $section->setDescription('');
         $section->setProperties([
             $this->commonGroundService->cleanUrl(['component' => 'vtc', 'type' => 'properties', 'id' => 'b3ebaedc-578b-43bd-bc7e-91e5a5235de4']),
         ]);
@@ -250,7 +250,7 @@ class ZuiddrechtFixtures extends Fixture
         $manager->flush();
 
         /*
-         *  Ballie Afspraak
+         *  Balie Afspraak
          */
         $id = Uuid::fromString('32293766-8b3a-43ee-9f16-ed67234ac309');
         $processType = new ProcessType();
@@ -269,11 +269,11 @@ class ZuiddrechtFixtures extends Fixture
         $stage->setName('Afspraak');
         $stage->setIcon('fas fa-users');
         $stage->setSlug('afspraak');
-        $stage->setDescription('de details van uw afspraak');
+        $stage->setDescription('');
 
         $section = new Section();
-        $section->setName('Afspraak');
-        $section->setDescription('Waneer wilt u langskomen bij de balie?');
+        $section->setName('Waneer wilt u langskomen bij de balie?');
+        $section->setDescription('');
         $section->setProperties([
             $this->commonGroundService->cleanUrl(['component' => 'vtc', 'type' => 'properties', 'id' => 'b90265da-379e-4254-b6df-14f962a68212']),
             $this->commonGroundService->cleanUrl(['component' => 'vtc', 'type' => 'properties', 'id' => '1db8bb40-aa1d-4ddd-b4d7-d43c987869cb']),
@@ -289,11 +289,11 @@ class ZuiddrechtFixtures extends Fixture
         $stage->setName('Uw gegevens');
         $stage->setIcon('fas fa-users');
         $stage->setSlug('uw-gegevens');
-        $stage->setDescription('Hoe kunnen wij u bereiken');
+        $stage->setDescription('');
 
         $section = new Section();
-        $section->setName('Contact');
-        $section->setDescription('Uw contact gegevens');
+        $section->setName('Hoe kunnen we u bereiken?');
+        $section->setDescription('');
         $section->setProperties([
             $this->commonGroundService->cleanUrl(['component' => 'vtc', 'type' => 'properties', 'id' => '3ed36d5b-349f-42f2-a084-f2feb20899be']),
             $this->commonGroundService->cleanUrl(['component' => 'vtc', 'type' => 'properties', 'id' => 'c4e88952-bd02-4832-886f-316bcbaf6ed4']),
