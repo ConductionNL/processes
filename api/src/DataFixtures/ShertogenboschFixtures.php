@@ -57,7 +57,7 @@ class ShertogenboschFixtures extends Fixture
         $processType = $manager->getRepository('App:ProcessType')->findOneBy(['id'=> $id]);
 
         $stage = new Stage();
-        $stage->setName('Waarheen en Waneer');
+        $stage->setName('Waarheen en Wanneer');
         $stage->setDescription('Waarheen en waneer wilt u verhuizen');
         $stage->setIcon('fas fa-calendar');
         $stage->setSlug('gegevens');
