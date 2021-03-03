@@ -45,7 +45,7 @@ class ShertogenboschFixtures extends Fixture
         $id = Uuid::fromString('c8de2851-332d-4284-b86e-ba0615694427');
         $processType = new ProcessType();
         $processType->setName('Verhuizen');
-        $processType->setIcon('fal fa-truck-moving');
+        $processType->setIcon('fas fa-truck-moving');
         $processType->setDescription('Hier kunt u uw verhuizing doorgeven.');
         $processType->setSourceOrganization($this->commonGroundService->cleanUrl(['component'=>'wrc', 'type'=>'organizations', 'id'=>'4f387d0e-a2e5-44c0-9902-c31b63a8ee36'])); //'001709124'
         $processType->setRequestType($this->commonGroundService->cleanUrl(['component'=>'vtc', 'type'=>'request_types', 'id'=>'37812338-fa7c-46c5-a914-bcf17339a4c5']));
@@ -59,7 +59,7 @@ class ShertogenboschFixtures extends Fixture
         $stage = new Stage();
         $stage->setName('Waarheen en Waneer');
         $stage->setDescription('Waarheen en waneer wilt u verhuizen');
-        $stage->setIcon('fal fa-calendar');
+        $stage->setIcon('fas fa-calendar');
         $stage->setSlug('gegevens');
         $stage->setProcess($processType);
 
@@ -81,7 +81,7 @@ class ShertogenboschFixtures extends Fixture
         $stage = new Stage();
         $stage->setName('Contact Gegevens');
         $stage->setDescription('Hoe kunnen wij u bereiken');
-        $stage->setIcon('fal fa-calendar');
+        $stage->setIcon('fas fa-calendar');
         $stage->setSlug('contact');
         $stage->setProcess($processType);
 
@@ -113,15 +113,15 @@ class ShertogenboschFixtures extends Fixture
         $manager->flush();
 
         $stage = new Stage();
-        $stage->setName('gegevens organisatie');
-        $stage->setDescription('De contactgegeven van de organisatie');
-        $stage->setIcon('fas fa-users   ');
+        $stage->setName('LIVE!2021');
+        $stage->setDescription('Deze stap zit normaal gesproken niet in de klantreis maar om je de inlog gegevens te kunnen e-mailen voor het zaaksysteem moeten we je wel kunnen bereiken! (oh en vergeet de gratis tompouce niet die je krijgt als je de zaak netjes afrond in het zaaksysteem!)');
+        $stage->setIcon('fas fa-users');
         $stage->setSlug('bedrijfgegevens');
         $stage->setProcess($processType);
 
         $section = new Section();
         $section->setStage($stage);
-        $section->setName('Contactgegevens voor de tompoes');
+        $section->setName('Contactgegevens voor de tompouce');
         $section->setDescription('Wat zijn uw contactgegevens?');
         $section->setProperties([
             $this->commonGroundService->cleanUrl(['component' => 'vtc', 'type' => 'properties', 'id' => 'ba8506d8-458e-4d6d-b88a-8107f960d9b5']),

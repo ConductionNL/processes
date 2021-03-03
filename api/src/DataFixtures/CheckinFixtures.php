@@ -41,6 +41,7 @@ class CheckinFixtures extends Fixture
         $processType = new ProcessType();
         $processType->setName('Deelnemen aan het checking platform');
         $processType->setIcon('fa fa-user');
+        $processType->setAudience('none');
         $processType->setDescription('Om als horeca gebruik te kunnen maken van de checking functionaliteit moet u deelnemen aan het platform, en een abonement afsluiten.');
         $processType->setInstructionText(file_get_contents(dirname(__FILE__).'/Resources/chin/onboarding/instruction.html.twig', 'r'));
         $processType->setSubmitText(file_get_contents(dirname(__FILE__).'/Resources/chin/onboarding/submit_organization.html.twig', 'r'));
@@ -122,6 +123,7 @@ class CheckinFixtures extends Fixture
         $processType = new ProcessType();
         $processType->setName('Deelnemen aan het checking platform als ondernemer');
         $processType->setIcon('fa fa-user');
+        $processType->setAudience('none');
         $processType->setDescription('');
         $processType->setInstructionText(file_get_contents(dirname(__FILE__).'/Resources/chin/onboarding/instruction_organization.html.twig', 'r'));
         $processType->setSubmitText(file_get_contents(dirname(__FILE__).'/Resources/chin/onboarding/submit_organization.html.twig', 'r'));
@@ -217,6 +219,7 @@ class CheckinFixtures extends Fixture
         $id = Uuid::fromString('7ea9a041-d96f-4f4b-adc1-e1a46ea8463d');
         $processType = new ProcessType();
         $processType->setName('Aanvraag GGD');
+        $processType->setAudience('none');
         $processType->setIcon('fa fa-user');
         $processType->setDescription('Via dit process kunt een GGD aanvraag voor bezoekers gegevens aan ons doorgeven zodat wij deze gegevens bij de GGD kunnen aanleveren');
         $processType->setSourceOrganization($this->commonGroundService->cleanUrl(['component'=>'wrc', 'type'=>'organizations', 'id'=>'4d1eded3-fbdf-438f-9536-8747dd8ab591']));
@@ -286,6 +289,7 @@ class CheckinFixtures extends Fixture
         $processType = new ProcessType();
         $processType->setName('Gegevens opvragen');
         $processType->setIcon('fa fa-user');
+        $processType->setAudience('none');
         $processType->setDescription('Als u positief getest bent voor covid-19 zal de GGD bij u gegevens opvragen ivm een contact onderzoek. U kunt deze gegevens hier downloaden');
         $processType->setSourceOrganization($this->commonGroundService->cleanUrl(['component'=>'wrc', 'type'=>'organizations', 'id'=>'4d1eded3-fbdf-438f-9536-8747dd8ab591']));
         $processType->setRequestType($this->commonGroundService->cleanUrl(['component'=>'vtc', 'type'=>'request_types', 'id'=>'39fe2fed-b5dc-42ce-9f9e-64101351b566']));
@@ -324,6 +328,7 @@ class CheckinFixtures extends Fixture
        */
         $id = Uuid::fromString('0465a588-b82a-436c-b9a5-2528c3608ec0');
         $processType = new ProcessType();
+        $processType->setAudience('none');
         $processType->setName('Contact formulier');
         $processType->setIcon('fas fa-clipboard-list');
         $processType->setDescription('Door dit proces te doorlopen kunt u contact opnemen met Conduction');
@@ -376,6 +381,7 @@ class CheckinFixtures extends Fixture
        */
         $id = Uuid::fromString('1e814be2-1a60-4869-9386-053826de19c4');
         $processType = new ProcessType();
+        $processType->setAudience('none');
         $processType->setName('Idee formulier');
         $processType->setIcon('fas fa-clipboard-list');
         $processType->setDescription('Door dit proces te doorlopen kunt u uw idee opsturen naar Conduction');

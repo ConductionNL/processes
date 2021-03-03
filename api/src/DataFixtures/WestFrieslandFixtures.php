@@ -46,6 +46,7 @@ class WestFrieslandFixtures extends Fixture
         $processType->setAudience('organization');
         $processType->setSourceOrganization($this->commonGroundService->cleanUrl(['component'=>'wrc', 'type'=>'organizations', 'id'=>'d280c4d3-6310-46db-9934-5285ec7d0d5e']));
         $processType->setName('Aanvragen begrafenis');
+        $processType->setAudience('none');
         $processType->setDescription('Plan een begrafenis op een gekozen begraafplaats.');
         $processType->setRequestType($this->commonGroundService->cleanUrl(['component'=>'vtc', 'type'=>'request_types', 'id'=>'c2e9824e-2566-460f-ab4c-905f20cddb6c']));
         $manager->persist($processType);
@@ -291,6 +292,7 @@ class WestFrieslandFixtures extends Fixture
         $processType->setAudience('organization');
         $processType->setSourceOrganization($this->commonGroundService->cleanUrl(['component'=>'wrc', 'type'=>'organizations', 'id'=>'d280c4d3-6310-46db-9934-5285ec7d0d5e']));
         $processType->setName('Wijziging');
+        $processType->setAudience('none');
         $processType->setDescription('Met dit verzoek kunt u een reeds in behandeling zijnd verzoek wijzigen');
         $processType->setRequestType($this->commonGroundService->cleanUrl(['component'=>'vtc', 'type'=>'request_types', 'id'=>'5223c58e-75a5-4a9d-86ca-47b77b4656e8']));
         $manager->persist($processType);
@@ -337,6 +339,7 @@ class WestFrieslandFixtures extends Fixture
         $processType->setAudience('organization');
         $processType->setSourceOrganization($this->commonGroundService->cleanUrl(['component'=>'wrc', 'type'=>'organizations', 'id'=>'d280c4d3-6310-46db-9934-5285ec7d0d5e']));
         $processType->setName('Bezwaar');
+        $processType->setAudience('none');
         $processType->setDescription('Met dit verzoek kunt bezwaar maken tegen de uitkomst van een procedure');
         $processType->setRequestType($this->commonGroundService->cleanUrl(['component'=>'vtc', 'type'=>'request_types', 'id'=>'5013042b-ffab-4933-9fd8-edfbc0c82b22']));
         $manager->persist($processType);

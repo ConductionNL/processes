@@ -36,6 +36,7 @@ class UtrechtFixtures extends Fixture
 
         $id = Uuid::fromString('5b10c1d6-7121-4be2-b479-7523f1b625f1');
         $processType = new ProcessType();
+        $processType->setAudience('none');
         $processType->setIcon('fal fa-rings-wedding');
         $processType->setSourceOrganization('000');
         $processType->setName('Huwelijk / Partnerschap');
