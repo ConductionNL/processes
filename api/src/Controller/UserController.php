@@ -21,7 +21,7 @@ class UserController extends AbstractController
      * @Route("/login", methods={"GET"})
      * @Template
      */
-    public function login(Request $request, CommonGroundService $commonGroundService, ParameterBagInterface $params, EventDispatcherInterface $dispatcher)
+    public function login()
     {
         return [];
     }
@@ -30,7 +30,7 @@ class UserController extends AbstractController
      * @Route("/logout", methods={"GET"})
      * @Template
      */
-    public function logout(Request $request, CommonGroundService $commonGroundService, ParameterBagInterface $params, EventDispatcherInterface $dispatcher)
+    public function logout()
     {
         return [];
     }
