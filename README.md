@@ -1,8 +1,12 @@
 # procestypecatalogus
+[![StyleCI](https://github.styleci.io/repos/198549944/shield?branch=master)](https://github.styleci.io/repos/198549944?branch=master)
+[![Docker Image CI](https://github.com/ConductionNL/procestypecatalogus/workflows/Docker%20Image%20CI/badge.svg?branch=master)](https://github.com/ConductionNL/procestypecatalogus/actions?query=workflow%3A"Docker+Image+CI") <br>
+[![Artifacthub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/procestypecatalogus)](https://artifacthub.io/packages/helm/procestypecatalogus/procestypecatalogus)
+[![BCH compliance](https://bettercodehub.com/edge/badge/ConductionNL/procestypecatalogus?branch=master)](https://bettercodehub.com/)
 
 Description
 ----
-Naast deze JSON rest API is er ook een [graphql](/graphql) interface beschikbaar.
+De Proces Type Catalogus beschrijft de gebruikersreis waarmee een verzoek tot stand komt. Of om het simpel te zeggen het neemt een verzoektype en deelt deze op in stappen en secties. Hierbij moet het eindresultaat van een proces een geldig verzoek zijn. Het is dus mogelijk om properties vanuit een verzoek niet uit te vragen (ofwel niet op te nemen in een stap of sectie), mits deze property vanuit het verzoek type niet verplicht is.<br><br> Een verzoektype kan in principe door meerdere procestypen worden gebruikt, sterker nog de wens hiertoe vormt de basis voor het uit elkaar trekken van deze twee componenten. Een denkbeeldig voorbeeld hiervan zou zijn, als een gemeente aanvullende vragen heeft bij een verhuizing vanuit het buitenland. Deze aanvullende vragen zouden dan als niet verplicht kunnen worden opgenomen in het verzoektype. Vervolgens zouden het twee processen kunnen zijn: één voor verhuizingen binnen Nederland, waarbij de aanvullende vragen niet zijn opgenomen en één voor verhuizing van buiten Nederland waarbij deze vragen wel worden gesteld.<br><br> Het is bijvoorbeeld ook goed denkbaar dat verschillende kanalen gebruik maken van verschillende processen die tot hetzelfde verzoek leiden (bijvoorbeeld een webformulier en chatbot). In deze context is het wel belangrijk om te constateren dat de Proces Type Catalogus een gebruikers flow beschrijft voor het tot stand komen van een geldig verzoek, maar dat de Proces Type Catalogus op zich niet dwingend is. Sterker nog het VTC en VRC ondersteunen het opstarten van (bijvoorbeeld Camunda) BPMN processen bij status wijzigingen, zoals het opstarten van een verzoek. Dat betekent dat een BPMN-engine ook in staat is om aan de hand van een verzoektype een verzoek te maken en te valideren, mét of zonder menselijke tussenkomst.
 
 Additional Information
 ----
@@ -21,7 +25,7 @@ We differentiate between two way's of installing this component, a local install
 #### Local installation
 First make sure you have [docker desktop](https://www.docker.com/products/docker-desktop) running on your computer. Then clone the repository to a directory on your local machine through a [git command](https://github.com/git-guides/git-clone) or [git kraken](https://www.gitkraken.com) (ui for git). If successful you can now navigate to the directory of your cloned repository in a command prompt and execute docker-compose up.
 ```CLI
-$ docker-compose up 
+$ docker-compose up
 ```
 This will build the docker image and run the used containers and when seeing the log from the php container: "NOTICE: ready to handle connections", u are ready to view the documentation at localhost on your preferred browser.
 
