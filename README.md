@@ -3,6 +3,7 @@
 [![Docker Image CI](https://github.com/ConductionNL/procestypecatalogus/workflows/Docker%20Image%20CI/badge.svg?branch=master)](https://github.com/ConductionNL/procestypecatalogus/actions?query=workflow%3A"Docker+Image+CI") <br>
 [![Artifacthub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/procestypecatalogus)](https://artifacthub.io/packages/helm/procestypecatalogus/procestypecatalogus)
 [![BCH compliance](https://bettercodehub.com/edge/badge/ConductionNL/procestypecatalogus?branch=master)](https://bettercodehub.com/)
+[![Componenten Catalogus](https://img.shields.io/badge/vng--componentencatalogus-posted-green)](https://componentencatalogus.commonground.nl/componenten/125?)
 [![Status badge](https://shields.api-test.nl/endpoint.svg?style=for-the-badge&url=https%3A//api-test.nl/api/v1/provider-latest-badge/15227cda-979e-4944-bdee-a2374aa34ebf/)](https://api-test.nl/server/4/846aa2d7-bda5-4d0f-a806-c87ce885b1c6/15227cda-979e-4944-bdee-a2374aa34ebf/latest/)
 
 Description
