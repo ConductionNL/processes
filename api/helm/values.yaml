@@ -8,7 +8,7 @@ settings:
   name: procestypecatalogus
   version: V1.0
   majorVersion: v1
-  description: 'Naast deze JSON rest API is er ook een [graphql](/graphql) interface beschikbaar.'
+  description: 'De Proces Type Catalogus beschrijft de gebruikersreis waarmee een verzoek tot stand komt. Of om het simpel te zeggen het neemt een verzoektype en deelt deze op in stappen en secties. Hierbij moet het eindresultaat van een proces een geldig verzoek zijn. Het is dus mogelijk om properties vanuit een verzoek niet uit te vragen (ofwel niet op te nemen in een stap of sectie), mits deze property vanuit het verzoek type niet verplicht is.'
   repro: https://github.com/ConductionNL/procestypecatalogus
   demo: pc.zaakonline.nl
   domain: zuid-drecht.nl
