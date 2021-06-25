@@ -11,9 +11,8 @@ info:
     - Repository: [online](https://github.com/ConductionNL/procestypecatalogus) / [zip](https://github.com/ConductionNL/procestypecatalogus/archive/master.zip)
     - Docker Image: [online]() 
     - Datamodel: [postman](schema/procestypecatalogus.postman_collection.json) / [oas](schema/openapi.yaml) / [pdf](schema/datamodel.pdf) / [modelio (zip)](schema/Datamodel_Modelio.zip) 
-    
-    De Proces Type Catalogus beschrijft de gebruikersreis waarmee een verzoek tot stand komt. Of om het simpel te zeggen het neemt een verzoektype en deelt deze op in stappen en secties. Hierbij moet het eindresultaat van een proces een geldig verzoek zijn. Het is dus mogelijk om properties vanuit een verzoek niet uit te vragen (ofwel niet op te nemen in een stap of sectie), mits deze property vanuit het verzoek type niet verplicht is.         
-    
+
+    Naast deze JSON rest API is er ook een [graphql](/graphql) interface beschikbaar.         
 paths:
   /audit_trails:
     get:
@@ -10584,12 +10583,12 @@ definitions:
         description: 'The moment this request was created'
         type: string
         format: date-time
-        example: '2021-06-23 09:12:16'
+        example: '2021-06-25 08:33:20'
       dateModified:
         description: 'The moment this request last Modified'
         type: string
         format: date-time
-        example: '2021-06-23 09:12:16'
+        example: '2021-06-25 08:33:20'
     required: []
   ChangeLog-write:
     properties:
@@ -10703,12 +10702,12 @@ definitions:
         description: 'The moment this request was created'
         type: string
         format: date-time
-        example: '2021-06-23 09:12:16'
+        example: '2021-06-25 08:33:20'
       dateModified:
         description: 'The moment this request last Modified'
         type: string
         format: date-time
-        example: '2021-06-23 09:12:16'
+        example: '2021-06-25 08:33:20'
     required: []
   AuditTrail-write:
     properties:
@@ -10721,45 +10720,40 @@ definitions:
 tags:
   -
     name: Stage
-    description: |
+    description: |+
       A single stage within a process.
-      
-      
+
   -
     name: Template
-    description: |
-      
-      
-      
+    description: |+
+
+
   -
     name: Condition
-    description: |
-      
-      
-      
+    description: |+
+
+
   -
     name: ProcessType
-    description: |
+    description: |+
       A process.
-      
-      
+
   -
     name: Section
-    description: |
-      
-      
-      
+    description: |+
+
+
   -
     name: ChangeLog
-    description: |
+    description: |-
       An resource representing a log line.
-      
+
       This entity represents a product that can be ordered via the OrderRegistratieComponent.
   -
     name: AuditTrail
-    description: |
+    description: |-
       An resource representing a log line.
-      
+
       This entity represents a product that can be ordered via the OrderRegistratieComponent.
 securityDefinitions:
   JWT-Oauth:
