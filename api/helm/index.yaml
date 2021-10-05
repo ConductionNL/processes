@@ -4,16 +4,17 @@ entries:
   - annotations:
       category: Database
     apiVersion: v2
-    appVersion: 11.10.0
-    created: "2021-07-06T20:50:23.4975145+02:00"
+    appVersion: 11.13.0
+    created: "2021-10-05T16:23:35.1811913+02:00"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
       version: 1.x.x
-    description: Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.
-    digest: eebe8f456cf98d5927a35666d1d899174dc4d3e09f26788033f761527bc90749
+    description: Chart for PostgreSQL, an object-relational database management system
+      (ORDBMS) with an emphasis on extensibility and on standards-compliance.
+    digest: 1b7c4bfba1e8257793e8d6690e02b86c0bdac99922e1fa74b6a7df9d800938ab
     home: https://github.com/bitnami/charts/tree/master/bitnami/postgresql
-    icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-110x117.png
+    icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-220x234.png
     keywords:
     - postgresql
     - postgres
@@ -31,14 +32,48 @@ entries:
     - https://github.com/bitnami/bitnami-docker-postgresql
     - https://www.postgresql.org/
     urls:
-    - charts/postgresql-10.1.1.tgz
-    version: 10.1.1
+    - charts/postgresql-10.10.3.tgz
+    version: 10.10.3
   procestypecatalogus:
   - annotations:
       artifacthub.io/containsSecurityUpdates: "true"
     apiVersion: v2
     appVersion: V1.0
-    created: "2021-07-06T20:50:23.4935131+02:00"
+    created: "2021-10-05T16:23:35.161348+02:00"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.10.3
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.3.2
+    digest: 02e297671874cc4d76bb44980360d0c8c7e3dcf89e95bd74686c4ed68cac883f
+    home: https://www.conduction.nl
+    icon: https://conductionnl.github.io/images/conduction_avatar_blue_on_transparant.svg
+    keywords:
+    - commonground
+    - haven
+    - nlx
+    - component
+    maintainers:
+    - email: ruben@conduction.nl
+      name: Ruben van der Linde
+    - email: info@conduction.nl
+      name: Conduction
+    name: procestypecatalogus
+    sources:
+    - https://commonground.conduction.nl/
+    - https://www.commonground.nl/
+    urls:
+    - procestypecatalogus-1.1.0.tgz
+    version: 1.1.0
+  - annotations:
+      artifacthub.io/containsSecurityUpdates: "true"
+    apiVersion: v2
+    appVersion: V1.0
+    created: "2021-10-05T16:23:35.1401238+02:00"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -48,7 +83,8 @@ entries:
       name: redis
       repository: https://charts.bitnami.com/bitnami
       version: 12.7.7
-    description: Naast deze JSON rest API is er ook een [graphql](/graphql) interface beschikbaar.
+    description: Naast deze JSON rest API is er ook een [graphql](/graphql) interface
+      beschikbaar.
     digest: abc60876a29df56b6ceaf8beab00818fcf63683f0c16dcfb248d42f96001bbf1
     home: https://www.conduction.nl
     icon: https://conductionnl.github.io/images/conduction_avatar_blue_on_transparant.svg
@@ -71,8 +107,13 @@ entries:
     version: 1.0.0
   - apiVersion: v1
     appVersion: V1.0
-    created: "2021-07-06T20:50:23.4855163+02:00"
-    description: De Proces Type Catalogus beschrijft de gebruikersreis waarmee een verzoek tot stand komt. Of om het simpel te zeggen het neemt een verzoektype en deelt deze op in stappen en secties. Hierbij moet het eindresultaat van een proces een geldig verzoek zijn. Het is dus mogelijk om properties vanuit een verzoek niet uit te vragen (ofwel niet op te nemen in een stap of sectie), mits deze property vanuit het verzoek type niet verplicht is.
+    created: "2021-10-05T16:23:35.1201068+02:00"
+    description: De Proces Type Catalogus beschrijft de gebruikersreis waarmee een
+      verzoek tot stand komt. Of om het simpel te zeggen het neemt een verzoektype
+      en deelt deze op in stappen en secties. Hierbij moet het eindresultaat van een
+      proces een geldig verzoek zijn. Het is dus mogelijk om properties vanuit een
+      verzoek niet uit te vragen (ofwel niet op te nemen in een stap of sectie), mits
+      deze property vanuit het verzoek type niet verplicht is.
     digest: 6621fdf9bc7229ebc6ca1a8b50fd6403555e69a5d67744f0351d4668b58efb4b
     home: https://www.conduction.nl
     icon: https://conductionnl.github.io/images/conduction_avatar_blue_on_transparant.svg
@@ -97,16 +138,18 @@ entries:
   - annotations:
       category: Database
     apiVersion: v2
-    appVersion: 6.0.11
-    created: "2021-07-06T20:50:23.5025142+02:00"
+    appVersion: 6.2.5
+    created: "2021-10-05T16:23:35.1980872+02:00"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
       tags:
       - bitnami-common
       version: 1.x.x
-    description: Open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.
-    digest: 2d70861d16fc410ed6d6c818b97f7b0d519031147e5c7b42c5691d4c38742c44
+    description: Open source, advanced key-value store. It is often referred to as
+      a data structure server since keys can contain strings, hashes, lists, sets
+      and sorted sets.
+    digest: f8fa3b0bdaecf7f9aa1669b027c5452f7efaab21c10b0dbcf7148e17c54ac5b7
     home: https://github.com/bitnami/charts/tree/master/bitnami/redis
     icon: https://bitnami.com/assets/stacks/redis/img/redis-stack-220x234.png
     keywords:
@@ -123,6 +166,6 @@ entries:
     - https://github.com/bitnami/bitnami-docker-redis
     - http://redis.io/
     urls:
-    - charts/redis-12.7.7.tgz
-    version: 12.7.7
-generated: "2021-07-06T20:50:23.4785134+02:00"
+    - charts/redis-15.3.2.tgz
+    version: 15.3.2
+generated: "2021-10-05T16:23:35.1084163+02:00"
